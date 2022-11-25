@@ -1,5 +1,16 @@
-package org.example;public class Main {
+package org.example;
+
+public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        try {
+            String string = InputString.getSting();
+            System.out.println(string);
+        }catch (moreTenCharsExeption e){
+            System.out.println("More than 10 chars input");
+        }finally {
+            System.out.println("Продолжение программы");
+        }
     }
 }
+
